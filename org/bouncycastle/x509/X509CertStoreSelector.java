@@ -13,7 +13,7 @@ import org.bouncycastle.util.Selector;
  * @see org.bouncycastle.util.Selector
  * @see org.bouncycastle.x509.X509Store
  * @see org.bouncycastle.jce.provider.X509StoreCertCollection
- * @deprecated use the classes under org.bouncycastle.cert.selector
+ * deprecated use the classes under org.bouncycastle.cert.selector
  */
 public class X509CertStoreSelector
     extends X509CertSelector

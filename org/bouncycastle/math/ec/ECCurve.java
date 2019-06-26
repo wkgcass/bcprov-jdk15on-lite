@@ -122,27 +122,13 @@ public abstract class ECCurve
         return p;
     }
 
-    /**
-     * @deprecated per-point compression property will be removed, use {@link #validatePoint(BigInteger, BigInteger)}
-     * and refer {@link ECPoint#getEncoded(boolean)}
-     */
-    public ECPoint validatePoint(BigInteger x, BigInteger y, boolean withCompression)
-    {
-        ECPoint p = createPoint(x, y, withCompression);
-        if (!p.isValid())
-        {
-            throw new IllegalArgumentException("Invalid point coordinates");
-        }
-        return p;
-    }
-
     public ECPoint createPoint(BigInteger x, BigInteger y)
     {
         return createPoint(x, y, false);
     }
 
     /**
-     * @deprecated per-point compression property will be removed, use {@link #createPoint(BigInteger, BigInteger)}
+     * deprecated per-point compression property will be removed, use {@link #createPoint(BigInteger, BigInteger)}
      * and refer {@link ECPoint#getEncoded(boolean)}
      */
     public ECPoint createPoint(BigInteger x, BigInteger y, boolean withCompression)
@@ -624,7 +610,7 @@ public abstract class ECCurve
         ECPoint.Fp infinity;
 
         /**
-         * @deprecated use constructor taking order/cofactor
+         * deprecated use constructor taking order/cofactor
          */
         public Fp(BigInteger q, BigInteger a, BigInteger b)
         {
@@ -644,14 +630,6 @@ public abstract class ECCurve
             this.order = order;
             this.cofactor = cofactor;
             this.coord = FP_DEFAULT_COORDS;
-        }
-
-        /**
-         * @deprecated use constructor taking order/cofactor
-         */
-        protected Fp(BigInteger q, BigInteger r, ECFieldElement a, ECFieldElement b)
-        {
-            this(q, r, a, b, null, null);
         }
 
         protected Fp(BigInteger q, BigInteger r, ECFieldElement a, ECFieldElement b, BigInteger order, BigInteger cofactor)
@@ -1015,7 +993,7 @@ public abstract class ECCurve
          * @param b The coefficient <code>b</code> in the Weierstrass equation
          * for non-supersingular elliptic curves over
          * <code>F<sub>2<sup>m</sup></sub></code>.
-         * @deprecated use constructor taking order/cofactor
+         * deprecated use constructor taking order/cofactor
          */
         public F2m(
             int m,
@@ -1073,7 +1051,7 @@ public abstract class ECCurve
          * @param b The coefficient <code>b</code> in the Weierstrass equation
          * for non-supersingular elliptic curves over
          * <code>F<sub>2<sup>m</sup></sub></code>.
-         * @deprecated use constructor taking order/cofactor
+         * deprecated use constructor taking order/cofactor
          */
         public F2m(
             int m,

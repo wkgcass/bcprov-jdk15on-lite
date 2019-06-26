@@ -20,7 +20,7 @@ public class PKCS1Encoding
     implements AsymmetricBlockCipher
 {
     /**
-     * @deprecated use NOT_STRICT_LENGTH_ENABLED_PROPERTY
+     * deprecated use NOT_STRICT_LENGTH_ENABLED_PROPERTY
      */
     public static final String STRICT_LENGTH_ENABLED_PROPERTY = "org.bouncycastle.pkcs1.strict";
 

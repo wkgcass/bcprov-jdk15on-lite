@@ -92,6 +92,7 @@ public abstract class DSABase
     /**
      * @deprecated replaced with "#engineSetParameter(java.security.spec.AlgorithmParameterSpec)"
      */
+    @Deprecated
     protected void engineSetParameter(
         String  param,
         Object  value)
@@ -102,6 +103,7 @@ public abstract class DSABase
     /**
      * @deprecated
      */
+    @Deprecated
     protected Object engineGetParameter(
         String      param)
     {

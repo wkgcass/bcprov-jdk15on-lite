@@ -137,6 +137,7 @@ public class XMSSMTSignatureSpi
     /**
      * @deprecated replaced with #engineSetParameter(java.security.spec.AlgorithmParameterSpec)
      */
+    @Deprecated
     protected void engineSetParameter(String param, Object value)
     {
         throw new UnsupportedOperationException("engineSetParameter unsupported");
@@ -145,6 +146,7 @@ public class XMSSMTSignatureSpi
     /**
      * @deprecated
      */
+    @Deprecated
     protected Object engineGetParameter(String param)
     {
         throw new UnsupportedOperationException("engineSetParameter unsupported");

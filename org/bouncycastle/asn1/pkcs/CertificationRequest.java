@@ -55,7 +55,7 @@ public class CertificationRequest
     }
 
     /**
-     * @deprecated use getInstance()
+     * deprecated use getInstance()
      */
     public CertificationRequest(
         ASN1Sequence seq)

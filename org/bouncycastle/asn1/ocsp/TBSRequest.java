@@ -24,23 +24,6 @@ public class TBSRequest
 
     boolean         versionSet;
 
-    /**
-     * @deprecated use method taking Extensions
-     * @param requestorName
-     * @param requestList
-     * @param requestExtensions
-     */
-    public TBSRequest(
-        GeneralName     requestorName,
-        ASN1Sequence    requestList,
-        X509Extensions requestExtensions)
-    {
-        this.version = V1;
-        this.requestorName = requestorName;
-        this.requestList = requestList;
-        this.requestExtensions = Extensions.getInstance(requestExtensions);
-    }
-
     public TBSRequest(
         GeneralName     requestorName,
         ASN1Sequence    requestList,

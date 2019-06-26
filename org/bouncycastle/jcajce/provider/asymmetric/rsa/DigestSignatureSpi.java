@@ -207,6 +207,7 @@ public class DigestSignatureSpi
     /**
      * @deprecated replaced with #engineSetParameter(java.security.spec.AlgorithmParameterSpec)
      */
+    @Deprecated
     protected void engineSetParameter(
         String param,
         Object value)
@@ -217,6 +218,7 @@ public class DigestSignatureSpi
     /**
      * @deprecated
      */
+    @Deprecated
     protected Object engineGetParameter(
         String param)
     {

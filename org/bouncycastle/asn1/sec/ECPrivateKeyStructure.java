@@ -19,7 +19,7 @@ import org.bouncycastle.util.BigIntegers;
 
 /**
  * the elliptic curve private key object from SEC 1
- * @deprecated use ECPrivateKey
+ * deprecated use ECPrivateKey
  */
 public class ECPrivateKeyStructure
     extends ASN1Object

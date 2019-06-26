@@ -52,9 +52,9 @@ public class PasswordRecipientInfo
     }
 
     /**
-     * @deprecated use getInstance() method.
+     * deprecated use getInstance() method.
      */
-    public PasswordRecipientInfo(
+    private PasswordRecipientInfo(
         ASN1Sequence seq)
     {
         version = (ASN1Integer)seq.getObjectAt(0);

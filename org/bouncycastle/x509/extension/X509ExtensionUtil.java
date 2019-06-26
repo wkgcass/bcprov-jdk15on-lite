@@ -22,12 +22,12 @@ import org.bouncycastle.util.Integers;
 
 
 /**
- * @deprecated use org.bouncycastle.cert.jcajce.JcaX509ExtensionUtils
+ * deprecated use org.bouncycastle.cert.jcajce.JcaX509ExtensionUtils
  */
 public class X509ExtensionUtil
 {
     /**
-     * @deprecated use org.bouncycastle.cert.jcajce.JcaX509ExtensionUtils.parseExtensionValue()
+     * deprecated use org.bouncycastle.cert.jcajce.JcaX509ExtensionUtils.parseExtensionValue()
      */
     public static ASN1Primitive fromExtensionValue(
         byte[]  encodedValue) 
@@ -36,28 +36,6 @@ public class X509ExtensionUtil
         ASN1OctetString octs = (ASN1OctetString)ASN1Primitive.fromByteArray(encodedValue);
         
         return ASN1Primitive.fromByteArray(octs.getOctets());
-    }
-
-    /**
-     * @deprecated use org.bouncycastle.cert.jcajce.JcaX509ExtensionUtils.getIssuerAlternativeNames()
-     */
-    public static Collection getIssuerAlternativeNames(X509Certificate cert)
-            throws CertificateParsingException
-    {
-        byte[] extVal = cert.getExtensionValue(Extension.issuerAlternativeName.getId());
-
-        return getAlternativeNames(extVal);
-    }
-
-    /**
-     * @deprecated use org.bouncycastle.cert.jcajce.JcaX509ExtensionUtils.getSubjectAlternativeNames()
-     */
-    public static Collection getSubjectAlternativeNames(X509Certificate cert)
-            throws CertificateParsingException
-    {        
-        byte[] extVal = cert.getExtensionValue(Extension.subjectAlternativeName.getId());
-
-        return getAlternativeNames(extVal);
     }
 
     private static Collection getAlternativeNames(byte[] extVal)

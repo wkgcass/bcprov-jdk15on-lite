@@ -68,9 +68,9 @@ public class V2Form
     }
 
     /**
-     * @deprecated use getInstance().
+     * deprecated use getInstance().
      */
-    public V2Form(
+    private V2Form(
         ASN1Sequence seq)
     {
         if (seq.size() > 3)

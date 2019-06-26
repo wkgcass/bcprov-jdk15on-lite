@@ -128,10 +128,10 @@ public class ASN1Boolean
     }
 
     /**
-     * @deprecated use getInstance(boolean) method.
+     * deprecated use getInstance(boolean) method.
      * @param value true or false.
      */
-    public ASN1Boolean(
+    private ASN1Boolean(
         boolean     value)
     {
         this.value = (value) ? TRUE_VALUE : FALSE_VALUE;

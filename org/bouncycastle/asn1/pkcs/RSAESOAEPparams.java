@@ -59,10 +59,10 @@ public class RSAESOAEPparams
     }
 
     /**
-     * @deprecated use getInstance()
+     * deprecated use getInstance()
      * @param seq
      */
-    public RSAESOAEPparams(
+    private RSAESOAEPparams(
         ASN1Sequence seq)
     {
         hashAlgorithm = DEFAULT_HASH_ALGORITHM;

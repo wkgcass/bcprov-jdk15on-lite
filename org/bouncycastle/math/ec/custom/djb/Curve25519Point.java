@@ -14,7 +14,7 @@ public class Curve25519Point extends ECPoint.AbstractFp
      * @param x affine x co-ordinate
      * @param y affine y co-ordinate
      * 
-     * @deprecated Use ECCurve.createPoint to construct points
+     * deprecated Use ECCurve.createPoint to construct points
      */
     public Curve25519Point(ECCurve curve, ECFieldElement x, ECFieldElement y)
     {
@@ -29,7 +29,7 @@ public class Curve25519Point extends ECPoint.AbstractFp
      * @param y affine y co-ordinate
      * @param withCompression if true encode with point compression
      * 
-     * @deprecated per-point compression property will be removed, refer {@link #getEncoded(boolean)}
+     * deprecated per-point compression property will be removed, refer {@link #getEncoded(boolean)}
      */
     public Curve25519Point(ECCurve curve, ECFieldElement x, ECFieldElement y, boolean withCompression)
     {

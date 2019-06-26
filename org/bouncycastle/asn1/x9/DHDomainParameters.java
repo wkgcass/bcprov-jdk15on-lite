@@ -13,7 +13,7 @@ import org.bouncycastle.asn1.ASN1TaggedObject;
 import org.bouncycastle.asn1.DERSequence;
 
 /**
- * @deprecated use DomainParameters
+ * deprecated use DomainParameters
  */
 public class DHDomainParameters
     extends ASN1Object

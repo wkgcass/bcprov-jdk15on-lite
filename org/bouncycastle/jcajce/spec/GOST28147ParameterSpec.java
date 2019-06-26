@@ -62,7 +62,7 @@ public class GOST28147ParameterSpec
     }
 
     /**
-     * @deprecated use getSBox()
+     * deprecated use getSBox()
      */
     public byte[] getSbox()
     {

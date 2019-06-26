@@ -36,7 +36,7 @@ public class ExtensionType
     /*
      * RFC 4492 5.1.
      */
-    /** @deprecated Use {@link #supported_groups} instead */
+    /** deprecated Use {@link #supported_groups} instead */
     public static final int elliptic_curves = supported_groups;
     public static final int ec_point_formats = 11;
 

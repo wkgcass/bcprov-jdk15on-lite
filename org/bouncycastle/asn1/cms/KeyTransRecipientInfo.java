@@ -50,9 +50,9 @@ public class KeyTransRecipientInfo
     }
 
     /**
-     * @deprecated use getInstance()
+     * deprecated use getInstance()
      */
-    public KeyTransRecipientInfo(
+    private KeyTransRecipientInfo(
         ASN1Sequence seq)
     {
         this.version = (ASN1Integer)seq.getObjectAt(0);

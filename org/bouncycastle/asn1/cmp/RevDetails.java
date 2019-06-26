@@ -44,17 +44,6 @@ public class RevDetails
         this.certDetails = certDetails;
     }
 
-    /**
-     * @deprecated use method taking Extensions
-     * @param certDetails
-     * @param crlEntryDetails
-     */
-    public RevDetails(CertTemplate certDetails, X509Extensions crlEntryDetails)
-    {
-        this.certDetails = certDetails;
-        this.crlEntryDetails = Extensions.getInstance(crlEntryDetails.toASN1Primitive());
-    }
-
     public RevDetails(CertTemplate certDetails, Extensions crlEntryDetails)
     {
         this.certDetails = certDetails;

@@ -134,6 +134,7 @@ public class GMSignatureSpi
         return engineParams;
     }
 
+    @Deprecated
     protected void engineSetParameter(
         String param,
         Object value)
@@ -141,6 +142,7 @@ public class GMSignatureSpi
         throw new UnsupportedOperationException("engineSetParameter unsupported");
     }
 
+    @Deprecated
     protected Object engineGetParameter(
         String param)
     {

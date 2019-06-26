@@ -11,7 +11,7 @@ import org.bouncycastle.math.raw.Nat576;
 public class SecT571R1Point extends AbstractF2m
 {
     /**
-     * @deprecated Use ECCurve.createPoint to construct points
+     * deprecated Use ECCurve.createPoint to construct points
      */
     public SecT571R1Point(ECCurve curve, ECFieldElement x, ECFieldElement y)
     {
@@ -19,7 +19,7 @@ public class SecT571R1Point extends AbstractF2m
     }
 
     /**
-     * @deprecated per-point compression property will be removed, refer {@link #getEncoded(boolean)}
+     * deprecated per-point compression property will be removed, refer {@link #getEncoded(boolean)}
      */
     public SecT571R1Point(ECCurve curve, ECFieldElement x, ECFieldElement y, boolean withCompression)
     {

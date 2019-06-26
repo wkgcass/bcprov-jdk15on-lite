@@ -72,7 +72,7 @@ public class X962Parameters
     }
 
     /**
-     * @deprecated use getInstance()
+     * deprecated use getInstance()
      */
     public X962Parameters(
         ASN1Primitive           obj)

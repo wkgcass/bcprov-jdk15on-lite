@@ -35,15 +35,6 @@ public class OriginatorIdentifierOrKey
         this.id = id;
     }
 
-    /**
-     * @deprecated use version taking a SubjectKeyIdentifier
-     */
-    public OriginatorIdentifierOrKey(
-        ASN1OctetString id)
-    {
-        this(new SubjectKeyIdentifier(id.getOctets()));
-    }
-
     public OriginatorIdentifierOrKey(
         SubjectKeyIdentifier id)
     {
@@ -54,15 +45,6 @@ public class OriginatorIdentifierOrKey
         OriginatorPublicKey id)
     {
         this.id = new DERTaggedObject(false, 1, id);
-    }
-
-    /**
-     * @deprecated use more specific version
-     */
-    public OriginatorIdentifierOrKey(
-        ASN1Primitive id)
-    {
-        this.id = id;
     }
 
     /**

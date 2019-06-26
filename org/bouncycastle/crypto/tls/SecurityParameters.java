@@ -88,14 +88,6 @@ public class SecurityParameters
         return sessionHash;
     }
 
-    /**
-     * @deprecated Use {@link SecurityParameters#getPSKIdentity()}
-     */
-    public byte[] getPskIdentity()
-    {
-        return pskIdentity;
-    }
-
     public byte[] getPSKIdentity()
     {
         return pskIdentity;

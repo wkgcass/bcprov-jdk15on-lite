@@ -27,7 +27,7 @@ import org.bouncycastle.util.Selector;
  * 
  * @see org.bouncycastle.x509.X509AttributeCertificate
  * @see org.bouncycastle.x509.X509Store
- * @deprecated use org.bouncycastle.cert.X509AttributeCertificateSelector and org.bouncycastle.cert.X509AttributeCertificateSelectorBuilder.
+ * deprecated use org.bouncycastle.cert.X509AttributeCertificateSelector and org.bouncycastle.cert.X509AttributeCertificateSelectorBuilder.
  */
 public class X509AttributeCertStoreSelector
     implements Selector

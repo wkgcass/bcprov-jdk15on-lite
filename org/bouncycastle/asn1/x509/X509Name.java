@@ -33,38 +33,38 @@ import org.bouncycastle.util.encoders.Hex;
  *                                   type  OBJECT IDENTIFIER,
  *                                   value ANY }
  * </pre>
- * @deprecated use org.bouncycastle.asn1.x500.X500Name.
+ * deprecated use org.bouncycastle.asn1.x500.X500Name.
  */
 public class X509Name
     extends ASN1Object
 {
     /**
      * country code - StringType(SIZE(2))
-     * @deprecated use a X500NameStyle
+     * deprecated use a X500NameStyle
      */
     public static final ASN1ObjectIdentifier C = new ASN1ObjectIdentifier("2.5.4.6");
 
     /**
      * organization - StringType(SIZE(1..64))
-     * @deprecated use a X500NameStyle
+     * deprecated use a X500NameStyle
      */
     public static final ASN1ObjectIdentifier O = new ASN1ObjectIdentifier("2.5.4.10");
 
     /**
      * organizational unit name - StringType(SIZE(1..64))
-     * @deprecated use a X500NameStyle
+     * deprecated use a X500NameStyle
      */
     public static final ASN1ObjectIdentifier OU = new ASN1ObjectIdentifier("2.5.4.11");
 
     /**
      * Title
-     * @deprecated use a X500NameStyle
+     * deprecated use a X500NameStyle
      */
     public static final ASN1ObjectIdentifier T = new ASN1ObjectIdentifier("2.5.4.12");
 
     /**
      * common name - StringType(SIZE(1..64))
-     * @deprecated use a X500NameStyle
+     * deprecated use a X500NameStyle
      */
     public static final ASN1ObjectIdentifier CN = new ASN1ObjectIdentifier("2.5.4.3");
 
@@ -77,7 +77,7 @@ public class X509Name
      * street - StringType(SIZE(1..64))
      */
     public static final ASN1ObjectIdentifier STREET = new ASN1ObjectIdentifier("2.5.4.9");
-    
+
     /**
      * device serial number name - StringType(SIZE(1..64))
      */
@@ -113,7 +113,7 @@ public class X509Name
      */
     public static final ASN1ObjectIdentifier POSTAL_CODE = new ASN1ObjectIdentifier(
                     "2.5.4.17");
-    
+
     /**
      * dnQualifier - DirectoryString(SIZE(1..64)
      */
@@ -189,21 +189,21 @@ public class X509Name
     /**
      * Email address (RSA PKCS#9 extension) - IA5String.
      * <p>Note: if you're trying to be ultra orthodox, don't use this! It shouldn't be in here.
-     * @deprecated use a X500NameStyle
+     * deprecated use a X500NameStyle
      */
     public static final ASN1ObjectIdentifier EmailAddress = PKCSObjectIdentifiers.pkcs_9_at_emailAddress;
-    
+
     /**
      * more from PKCS#9
      */
     public static final ASN1ObjectIdentifier UnstructuredName = PKCSObjectIdentifiers.pkcs_9_at_unstructuredName;
     public static final ASN1ObjectIdentifier UnstructuredAddress = PKCSObjectIdentifiers.pkcs_9_at_unstructuredAddress;
-    
+
     /**
      * email address in Verisign certificates
      */
     public static final ASN1ObjectIdentifier E = EmailAddress;
-    
+
     /*
      * others...
      */
@@ -228,13 +228,13 @@ public class X509Name
 
     /**
      * look up table translating OID values into their common symbols following the convention in RFC 2253
-     * 
+     *
      */
     public static final Hashtable RFC2253Symbols = new Hashtable();
 
     /**
      * look up table translating OID values into their common symbols following the convention in RFC 1779
-     * 
+     *
      */
     public static final Hashtable RFC1779Symbols = new Hashtable();
 
@@ -243,20 +243,8 @@ public class X509Name
      */
     public static final Hashtable DefaultLookUp = new Hashtable();
 
-    /**
-     * look up table translating OID values into their common symbols
-     * @deprecated use DefaultSymbols
-     */
-    public static final Hashtable OIDLookUp = DefaultSymbols;
-
-    /**
-     * look up table translating string values into their OIDS -
-     * @deprecated use DefaultLookUp
-     */
-    public static final Hashtable SymbolLookUp = DefaultLookUp;
-
-    private static final Boolean TRUE = new Boolean(true); // for J2ME compatibility
-    private static final Boolean FALSE = new Boolean(false);
+    private static final Boolean TRUE = Boolean.TRUE; // for J2ME compatibility
+    private static final Boolean FALSE = Boolean.FALSE;
 
     static
     {
@@ -359,7 +347,7 @@ public class X509Name
 
     /**
      * Return a X509Name based on the passed in tagged object.
-     * 
+     *
      * @param obj tag object holding name.
      * @param explicit true if explicitly tagged false otherwise.
      * @return the X509Name
@@ -398,9 +386,9 @@ public class X509Name
      * Constructor from ASN1Sequence
      *
      * the principal will be a list of constructed sets, each containing an (OID, String) pair.
-     * @deprecated use X500Name.getInstance()
+     * deprecated use X500Name.getInstance()
      */
-    public X509Name(
+    protected X509Name(
         ASN1Sequence  seq)
     {
         this.seq = seq;
@@ -411,7 +399,7 @@ public class X509Name
         {
             ASN1Set         set = ASN1Set.getInstance(((ASN1Encodable)e.nextElement()).toASN1Primitive());
 
-            for (int i = 0; i < set.size(); i++) 
+            for (int i = 0; i < set.size(); i++)
             {
                    ASN1Sequence s = ASN1Sequence.getInstance(set.getObjectAt(i).toASN1Primitive());
 
@@ -421,7 +409,7 @@ public class X509Name
                    }
 
                    ordering.addElement(ASN1ObjectIdentifier.getInstance(s.getObjectAt(0)));
-                   
+
                    ASN1Encodable value = s.getObjectAt(1);
                    if (value instanceof ASN1String && !(value instanceof DERUniversalString))
                    {
@@ -461,9 +449,9 @@ public class X509Name
      * <b>Note:</b> if the name you are trying to generate should be
      * following a specific ordering, you should use the constructor
      * with the ordering specified below.
-     * @deprecated use an ordered constructor! The hashtable ordering is rarely correct
+     * deprecated use an ordered constructor! The hashtable ordering is rarely correct
      */
-    public X509Name(
+    protected X509Name(
         Hashtable  attributes)
     {
         this(null, attributes);
@@ -494,9 +482,9 @@ public class X509Name
      * <p>
      * The passed in converter will be used to convert the strings into their
      * ASN.1 counterparts.
-     * @deprecated use X500Name, X500NameBuilder
+     * deprecated use X500Name, X500NameBuilder
      */
-    public X509Name(
+    private X509Name(
         Vector                   ordering,
         Hashtable                attributes,
         X509NameEntryConverter   converter)
@@ -537,9 +525,9 @@ public class X509Name
 
     /**
      * Takes two vectors one of the oids and the other of the values.
-     * @deprecated use X500Name, X500NameBuilder
+     * deprecated use X500Name, X500NameBuilder
      */
-    public X509Name(
+    protected X509Name(
         Vector  oids,
         Vector  values)
     {
@@ -551,9 +539,9 @@ public class X509Name
      * <p>
      * The passed in converter will be used to convert the strings into their
      * ASN.1 counterparts.
-     * @deprecated use X500Name, X500NameBuilder
+     * deprecated use X500Name, X500NameBuilder
      */
-    public X509Name(
+    private X509Name(
         Vector                  oids,
         Vector                  values,
         X509NameEntryConverter  converter)
@@ -586,9 +574,9 @@ public class X509Name
     /**
      * Takes an X509 dir name as a string of the format "C=AU, ST=Victoria", or
      * some such, converting it into an ordered set of name attributes.
-     * @deprecated use X500Name, X500NameBuilder
+     * deprecated use X500Name, X500NameBuilder
      */
-    public X509Name(
+    protected X509Name(
         String  dirName)
     {
         this(DefaultReverse, DefaultLookUp, dirName);
@@ -596,46 +584,16 @@ public class X509Name
 
     /**
      * Takes an X509 dir name as a string of the format "C=AU, ST=Victoria", or
-     * some such, converting it into an ordered set of name attributes with each
-     * string value being converted to its associated ASN.1 type using the passed
-     * in converter.
-     * @deprecated use X500Name, X500NameBuilder
-     */
-    public X509Name(
-        String                  dirName,
-        X509NameEntryConverter  converter)
-    {
-        this(DefaultReverse, DefaultLookUp, dirName, converter);
-    }
-
-    /**
-     * Takes an X509 dir name as a string of the format "C=AU, ST=Victoria", or
      * some such, converting it into an ordered set of name attributes. If reverse
      * is true, create the encoded version of the sequence starting from the
      * last element in the string.
-     * @deprecated use X500Name, X500NameBuilder
+     * deprecated use X500Name, X500NameBuilder
      */
-    public X509Name(
+    protected X509Name(
         boolean reverse,
         String  dirName)
     {
         this(reverse, DefaultLookUp, dirName);
-    }
-
-    /**
-     * Takes an X509 dir name as a string of the format "C=AU, ST=Victoria", or
-     * some such, converting it into an ordered set of name attributes with each
-     * string value being converted to its associated ASN.1 type using the passed
-     * in converter. If reverse is true the ASN.1 sequence representing the DN will
-     * be built by starting at the end of the string, rather than the start.
-     * @deprecated use X500Name, X500NameBuilder
-     */
-    public X509Name(
-        boolean                 reverse,
-        String                  dirName,
-        X509NameEntryConverter  converter)
-    {
-        this(reverse, DefaultLookUp, dirName, converter);
     }
 
     /**
@@ -650,9 +608,9 @@ public class X509Name
      * @param reverse true if we should start scanning from the end (RFC 2553).
      * @param lookUp table of names and their oids.
      * @param dirName the X.500 string to be parsed.
-     * @deprecated use X500Name, X500NameBuilder
+     * deprecated use X500Name, X500NameBuilder
      */
-    public X509Name(
+    protected X509Name(
         boolean     reverse,
         Hashtable   lookUp,
         String      dirName)
@@ -923,7 +881,7 @@ public class X509Name
             ASN1EncodableVector  vec = new ASN1EncodableVector();
             ASN1EncodableVector  sVec = new ASN1EncodableVector();
             ASN1ObjectIdentifier  lstOid = null;
-            
+
             for (int i = 0; i != ordering.size(); i++)
             {
                 ASN1EncodableVector     v = new ASN1EncodableVector();
@@ -934,8 +892,8 @@ public class X509Name
                 String  str = (String)values.elementAt(i);
 
                 v.add(converter.getConvertedValue(oid, str));
- 
-                if (lstOid == null 
+
+                if (lstOid == null
                     || ((Boolean)this.added.elementAt(i)).booleanValue())
                 {
                     sVec.add(new DERSequence(v));
@@ -944,15 +902,15 @@ public class X509Name
                 {
                     vec.add(new DERSet(sVec));
                     sVec = new ASN1EncodableVector();
-                    
+
                     sVec.add(new DERSequence(v));
                 }
-                
+
                 lstOid = oid;
             }
-            
+
             vec.add(new DERSet(sVec));
-            
+
             seq = new DERSequence(vec);
         }
 
@@ -1067,9 +1025,9 @@ public class X509Name
         {
             return false;
         }
-        
+
         ASN1Primitive derO = ((ASN1Encodable)obj).toASN1Primitive();
-        
+
         if (this.toASN1Primitive().equals(derO))
         {
             return true;
@@ -1082,7 +1040,7 @@ public class X509Name
             other = X509Name.getInstance(obj);
         }
         catch (IllegalArgumentException e)
-        { 
+        {
             return false;
         }
 
@@ -1092,7 +1050,7 @@ public class X509Name
         {
             return false;
         }
-        
+
         boolean[] indexes = new boolean[orderingSize];
         int       start, end, delta;
 
@@ -1142,7 +1100,7 @@ public class X509Name
                 return false;
             }
         }
-        
+
         return true;
     }
 
@@ -1150,7 +1108,7 @@ public class X509Name
     {
         String value = canonicalize(s1);
         String oValue = canonicalize(s2);
-        
+
         if (!value.equals(oValue))
         {
             value = stripInternalSpaces(value);
@@ -1168,7 +1126,7 @@ public class X509Name
     private String canonicalize(String s)
     {
         String value = Strings.toLowerCase(s.trim());
-        
+
         if (value.length() > 0 && value.charAt(0) == '#')
         {
             ASN1Primitive obj = decodeObject(value);
@@ -1371,7 +1329,7 @@ public class X509Name
 
         return new String(cs);
     }
-    
+
     public String toString()
     {
         return toString(DefaultReverse, DefaultSymbols);

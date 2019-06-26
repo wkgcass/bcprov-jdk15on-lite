@@ -5,7 +5,7 @@ package org.bouncycastle.asn1.x509;
  * java.util.StringTokenizer. We need this class as some of the
  * lightweight Java environment don't support classes like
  * StringTokenizer.
- * @deprecated use X500NameTokenizer
+ * deprecated use X500NameTokenizer
  */
 public class X509NameTokenizer
 {

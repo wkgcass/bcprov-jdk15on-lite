@@ -91,14 +91,6 @@ public class CertTemplateBuilder
         return this;
     }
 
-    /**
-     * @deprecated use method taking Extensions
-     */
-    public CertTemplateBuilder setExtensions(X509Extensions extens)
-    {
-        return setExtensions(Extensions.getInstance(extens));
-    }
-
     public CertTemplateBuilder setExtensions(Extensions extens)
     {
         extensions = extens;

@@ -181,9 +181,9 @@ public class SignerInfo
     }
 
     /**
-     * @deprecated use getInstance() method.
+     * deprecated use getInstance() method.
      */
-    public SignerInfo(
+    private SignerInfo(
         ASN1Sequence seq)
     {
         Enumeration     e = seq.getObjects();

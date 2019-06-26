@@ -122,26 +122,6 @@ public class ExtendedKeyUsage
     }
 
     /**
-     * @deprecated use KeyPurposeId[] constructor.
-     */
-    public ExtendedKeyUsage(
-        Vector usages)
-    {
-        ASN1EncodableVector v = new ASN1EncodableVector();
-        Enumeration         e = usages.elements();
-
-        while (e.hasMoreElements())
-        {
-            KeyPurposeId  o = KeyPurposeId.getInstance(e.nextElement());
-
-            v.add(o);
-            this.usageTable.put(o, o);
-        }
-
-        this.seq = new DERSequence(v);
-    }
-
-    /**
      * Return true if this ExtendedKeyUsage object contains the passed in keyPurposeId.
      *
      * @param keyPurposeId  the KeyPurposeId of interest.

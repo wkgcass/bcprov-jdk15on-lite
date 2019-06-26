@@ -296,13 +296,15 @@ public class PSSSignatureSpi
     /**
      * @deprecated replaced with <a href="#engineSetParameter(java.security.spec.AlgorithmParameterSpec)">engineSetParameter(java.security.spec.AlgorithmParameterSpec)</a>
      */
+    @Deprecated
     protected void engineSetParameter(
         String param,
         Object value)
     {
         throw new UnsupportedOperationException("engineSetParameter unsupported");
     }
-    
+
+    @Deprecated
     protected Object engineGetParameter(
         String param)
     {

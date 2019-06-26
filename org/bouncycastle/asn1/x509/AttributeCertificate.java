@@ -43,9 +43,9 @@ public class AttributeCertificate
     }
 
     /**
-     * @deprecated use getInstance() method.
+     * deprecated use getInstance() method.
      */
-    public AttributeCertificate(
+    private AttributeCertificate(
         ASN1Sequence    seq)
     {
         if (seq.size() != 3)

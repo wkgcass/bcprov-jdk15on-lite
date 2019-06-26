@@ -268,14 +268,6 @@ public abstract class ECPoint
         return x == null || y == null || (zs.length > 0 && zs[0].isZero());
     }
 
-    /**
-     * @deprecated per-point compression property will be removed, refer {@link #getEncoded(boolean)}
-     */
-    public boolean isCompressed()
-    {
-        return this.withCompression;
-    }
-
     public boolean isValid()
     {
         return implIsValid(false, true);
@@ -450,15 +442,6 @@ public abstract class ECPoint
     }
 
     /**
-     * @deprecated per-point compression property will be removed, refer {@link #getEncoded(boolean)}
-     * @return a byte encoding.
-     */
-    public byte[] getEncoded()
-    {
-        return getEncoded(this.withCompression);
-    }
-
-    /**
      * Get an encoding of the point value, optionally in compressed format.
      * 
      * @param compressed whether to generate a compressed point encoding.
@@ -621,7 +604,7 @@ public abstract class ECPoint
          * @param y affine y co-ordinate
          * @param withCompression if true encode with point compression
          * 
-         * @deprecated per-point compression property will be removed, refer {@link #getEncoded(boolean)}
+         * deprecated per-point compression property will be removed, refer {@link #getEncoded(boolean)}
          */
         public Fp(ECCurve curve, ECFieldElement x, ECFieldElement y, boolean withCompression)
         {
@@ -1620,7 +1603,7 @@ public abstract class ECPoint
          * @param y y point
          * @param withCompression true if encode with point compression.
          * 
-         * @deprecated per-point compression property will be removed, refer {@link #getEncoded(boolean)}
+         * deprecated per-point compression property will be removed, refer {@link #getEncoded(boolean)}
          */
         public F2m(ECCurve curve, ECFieldElement x, ECFieldElement y, boolean withCompression)
         {

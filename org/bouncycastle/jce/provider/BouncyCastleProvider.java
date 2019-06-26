@@ -138,7 +138,7 @@ public final class BouncyCastleProvider extends Provider
      */
     public BouncyCastleProvider()
     {
-        super(PROVIDER_NAME, 1.62, info);
+        super(PROVIDER_NAME, Double.toString(1.62), info);
 
         AccessController.doPrivileged(new PrivilegedAction()
         {
@@ -223,7 +223,7 @@ public final class BouncyCastleProvider extends Provider
             {
                 try
                 {
-                    ((AlgorithmProvider)clazz.newInstance()).configure(this);
+                    ((AlgorithmProvider)clazz.getDeclaredConstructor().newInstance()).configure(this);
                 }
                 catch (Exception e)
                 {   // this should never ever happen!!

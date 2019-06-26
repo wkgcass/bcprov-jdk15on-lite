@@ -57,7 +57,7 @@ public class CertificateList
     }
 
     /**
-     * @deprecated use getInstance() method.
+     * deprecated use getInstance() method.
      * @param seq
      */
     public CertificateList(

@@ -203,6 +203,7 @@ public class ECGOST2012SignatureSpi256
     /**
      * @deprecated replaced with "#engineSetParameter(java.security.spec.AlgorithmParameterSpec)"
      */
+    @Deprecated
     protected void engineSetParameter(
         String  param,
         Object  value)
@@ -213,6 +214,7 @@ public class ECGOST2012SignatureSpi256
     /**
      * @deprecated
      */
+    @Deprecated
     protected Object engineGetParameter(
         String      param)
     {

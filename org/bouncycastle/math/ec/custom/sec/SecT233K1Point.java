@@ -9,7 +9,7 @@ import org.bouncycastle.math.ec.ECPoint.AbstractF2m;
 public class SecT233K1Point extends AbstractF2m
 {
     /**
-     * @deprecated Use ECCurve.createPoint to construct points
+     * deprecated Use ECCurve.createPoint to construct points
      */
     public SecT233K1Point(ECCurve curve, ECFieldElement x, ECFieldElement y)
     {
@@ -17,7 +17,7 @@ public class SecT233K1Point extends AbstractF2m
     }
 
     /**
-     * @deprecated per-point compression property will be removed, refer {@link #getEncoded(boolean)}
+     * deprecated per-point compression property will be removed, refer {@link #getEncoded(boolean)}
      */
     public SecT233K1Point(ECCurve curve, ECFieldElement x, ECFieldElement y, boolean withCompression)
     {

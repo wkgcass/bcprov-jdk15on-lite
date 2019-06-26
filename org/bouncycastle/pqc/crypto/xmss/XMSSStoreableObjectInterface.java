@@ -3,7 +3,7 @@ package org.bouncycastle.pqc.crypto.xmss;
 /**
  * Interface for XMSS objects that need to be storeable as a byte array.
  *
- * @deprecated use Encodable
+ * deprecated use Encodable
  */
 public interface XMSSStoreableObjectInterface
 {

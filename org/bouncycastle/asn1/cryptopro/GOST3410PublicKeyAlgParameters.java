@@ -58,7 +58,7 @@ public class GOST3410PublicKeyAlgParameters
     }
 
     /**
-     * @deprecated use getInstance()
+     * deprecated use getInstance()
      */
     public GOST3410PublicKeyAlgParameters(
         ASN1Sequence  seq)

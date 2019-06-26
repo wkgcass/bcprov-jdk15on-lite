@@ -23,16 +23,6 @@ implements Mac
     private byte[] inputPad = new byte[BLOCK_LENGTH];
     private byte[] outputPad = new byte[BLOCK_LENGTH];
 
-    /**
-     * @deprecated uses incorrect pad for SHA-512 and SHA-384 use HMac.
-     */
-    public OldHMac(
-        Digest digest)
-    {
-        this.digest = digest;
-        digestSize = digest.getDigestSize();
-    }
-
     public String getAlgorithmName()
     {
         return digest.getAlgorithmName() + "/HMAC";

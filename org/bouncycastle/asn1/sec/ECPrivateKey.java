@@ -48,15 +48,6 @@ public class ECPrivateKey
     }
 
     /**
-     * @deprecated use constructor which takes orderBitLength to guarantee correct encoding.
-     */
-    public ECPrivateKey(
-        BigInteger key)
-    {
-        this(key.bitLength(), key);
-    }
-
-    /**
      * Base constructor.
      *
      * @param orderBitLength the bitLength of the order of the curve.
@@ -74,27 +65,6 @@ public class ECPrivateKey
         v.add(new DEROctetString(bytes));
 
         seq = new DERSequence(v);
-    }
-
-    /**
-     * @deprecated use constructor which takes orderBitLength to guarantee correct encoding.
-     */
-    public ECPrivateKey(
-        BigInteger key,
-        ASN1Encodable parameters)
-    {
-        this(key, null, parameters);
-    }
-
-    /**
-     * @deprecated use constructor which takes orderBitLength to guarantee correct encoding.
-     */
-    public ECPrivateKey(
-        BigInteger key,
-        DERBitString publicKey,
-        ASN1Encodable parameters)
-    {
-        this(key.bitLength(), key, publicKey, parameters);
     }
 
     public ECPrivateKey(

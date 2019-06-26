@@ -60,7 +60,7 @@ public class GeneralName
     private int           tag;
 
     /**
-     * @deprecated use X500Name constructor.
+     * deprecated use X500Name constructor.
      * @param dirName
      */
         public GeneralName(

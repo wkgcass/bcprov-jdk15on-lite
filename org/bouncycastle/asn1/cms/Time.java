@@ -45,9 +45,9 @@ public class Time
     }
 
     /**
-     * @deprecated use getInstance()
+     * deprecated use getInstance()
      */
-    public Time(
+    private Time(
         ASN1Primitive   time)
     {
         if (!(time instanceof ASN1UTCTime)

@@ -64,9 +64,9 @@ public class SubjectPublicKeyInfo
     }
 
     /**
-     @deprecated use SubjectPublicKeyInfo.getInstance()
+     deprecated use SubjectPublicKeyInfo.getInstance()
      */
-    public SubjectPublicKeyInfo(
+    private SubjectPublicKeyInfo(
         ASN1Sequence  seq)
     {
         if (seq.size() != 2)
@@ -87,7 +87,7 @@ public class SubjectPublicKeyInfo
     }
 
     /**
-     * @deprecated use getAlgorithm()
+     * deprecated use getAlgorithm()
      * @return    alg ID.
      */
     public AlgorithmIdentifier getAlgorithmId()
@@ -104,21 +104,6 @@ public class SubjectPublicKeyInfo
      * @return the public key as an ASN.1 primitive.
      */
     public ASN1Primitive parsePublicKey()
-        throws IOException
-    {
-        return ASN1Primitive.fromByteArray(keyData.getOctets());
-    }
-
-    /**
-     * for when the public key is an encoded object - if the bitstring
-     * can't be decoded this routine throws an IOException.
-     *
-     * @exception IOException - if the bit string doesn't represent a DER
-     * encoded object.
-     * @deprecated use parsePublicKey
-     * @return the public key as an ASN.1 primitive.
-     */
-    public ASN1Primitive getPublicKey()
         throws IOException
     {
         return ASN1Primitive.fromByteArray(keyData.getOctets());

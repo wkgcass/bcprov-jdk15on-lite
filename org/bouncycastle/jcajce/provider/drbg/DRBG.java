@@ -50,7 +50,7 @@ public class DRBG
             String[] pair = initialEntropySourceNames[t];
             try
             {
-                Object[] r = new Object[]{Class.forName(pair[0]).newInstance(), Class.forName(pair[1]).newInstance()};
+                Object[] r = new Object[]{Class.forName(pair[0]).getDeclaredConstructor().newInstance(), Class.forName(pair[1]).getDeclaredConstructor().newInstance()};
 
                 return r;
             }
@@ -149,7 +149,7 @@ public class DRBG
                 {
                     Class clazz = ClassUtil.loadClass(DRBG.class, sourceClass);
 
-                    return (EntropySourceProvider)clazz.newInstance();
+                    return (EntropySourceProvider)clazz.getDeclaredConstructor().newInstance();
                 }
                 catch (Exception e)
                 {
@@ -268,7 +268,7 @@ public class DRBG
     {
         protected HybridRandomProvider()
         {
-            super("BCHEP", 1.0, "Bouncy Castle Hybrid Entropy Provider");
+            super("BCHEP", Double.toString(1.0), "Bouncy Castle Hybrid Entropy Provider");
         }
     }
 

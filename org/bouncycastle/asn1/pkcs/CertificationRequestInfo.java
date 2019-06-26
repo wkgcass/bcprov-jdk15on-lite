@@ -87,7 +87,7 @@ public class CertificationRequestInfo
     }
 
     /**
-     * @deprecated use X500Name method.
+     * deprecated use X500Name method.
      */
     public CertificationRequestInfo(
         X509Name                subject,
@@ -98,7 +98,7 @@ public class CertificationRequestInfo
     }
 
     /**
-     * @deprecated use getInstance().
+     * deprecated use getInstance().
      */
     public CertificationRequestInfo(
         ASN1Sequence  seq)

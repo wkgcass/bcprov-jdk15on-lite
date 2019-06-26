@@ -58,9 +58,9 @@ public class RecipientKeyIdentifier
     }
 
     /**
-     * @deprecated use getInstance()
+     * deprecated use getInstance()
      */
-    public RecipientKeyIdentifier(
+    private RecipientKeyIdentifier(
         ASN1Sequence seq)
     {
         subjectKeyIdentifier = ASN1OctetString.getInstance(

@@ -176,6 +176,7 @@ public class SignatureSpi
     /**
      * @deprecated replaced with #engineSetParameter(java.security.spec.AlgorithmParameterSpec)
      */
+    @Deprecated
     protected void engineSetParameter(
         String param,
         Object value)
@@ -186,6 +187,7 @@ public class SignatureSpi
     /**
      * @deprecated
      */
+    @Deprecated
     protected Object engineGetParameter(
         String param)
     {

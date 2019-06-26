@@ -17,7 +17,7 @@ import java.util.Set;
  * 
  * @see java.security.cert.PKIXBuilderParameters
  * @see org.bouncycastle.jce.provider.PKIXCertPathBuilderSpi
- * @deprecated use PKIXExtendedBuilderParameters
+ * deprecated use PKIXExtendedBuilderParameters
  */
 public class ExtendedPKIXBuilderParameters extends ExtendedPKIXParameters
 {

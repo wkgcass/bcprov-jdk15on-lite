@@ -97,6 +97,7 @@ public class ISOSignatureSpi
     /**
      * @deprecated replaced with <a href="#engineSetParameter(java.security.spec.AlgorithmParameterSpec)">engineSetParameter(java.security.spec.AlgorithmParameterSpec)</a>
      */
+    @Deprecated
     protected void engineSetParameter(
         String param,
         Object value)
@@ -107,6 +108,7 @@ public class ISOSignatureSpi
     /**
      * @deprecated
      */
+    @Deprecated
     protected Object engineGetParameter(
         String param)
     {

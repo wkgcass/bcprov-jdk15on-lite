@@ -151,30 +151,6 @@ public class SignerLocation
         return dirStrings;
     }
 
-    /**
-     * @deprecated use getCountry()
-     */
-    public DERUTF8String getCountryName()
-    {
-        if (countryName == null)
-        {
-            return null;
-        }
-        return new DERUTF8String(getCountry().getString());
-    }
-
-    /**
-     * @deprecated use getLocality()
-     */
-    public DERUTF8String getLocalityName()
-    {
-        if (localityName == null)
-        {
-            return null;
-        }
-        return new DERUTF8String(getLocality().getString());
-    }
-
     public ASN1Sequence getPostalAddress()
     {
         return postalAddress;

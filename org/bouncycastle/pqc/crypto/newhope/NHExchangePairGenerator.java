@@ -16,11 +16,6 @@ public class NHExchangePairGenerator
         this.random = random;
     }
 
-    public ExchangePair GenerateExchange(AsymmetricKeyParameter senderPublicKey)
-    {
-        return generateExchange(senderPublicKey);
-    }
-
     public ExchangePair generateExchange(AsymmetricKeyParameter senderPublicKey)
     {
         NHPublicKeyParameters pubKey = (NHPublicKeyParameters)senderPublicKey;

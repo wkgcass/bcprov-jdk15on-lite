@@ -21,7 +21,7 @@ import org.bouncycastle.util.Selector;
 
 /**
  * Carrying class for an attribute certificate issuer.
- * @deprecated use org.bouncycastle.cert.AttributeCertificateIssuer
+ * deprecated use org.bouncycastle.cert.AttributeCertificateIssuer
  */
 public class AttributeCertificateIssuer
     implements CertSelector, Selector

@@ -35,9 +35,9 @@ public class OriginatorPublicKey
     }
 
     /**
-     * @deprecated use getInstance()
+     * deprecated use getInstance()
      */
-    public OriginatorPublicKey(
+    private OriginatorPublicKey(
         ASN1Sequence seq)
     {
         algorithm = AlgorithmIdentifier.getInstance(seq.getObjectAt(0));

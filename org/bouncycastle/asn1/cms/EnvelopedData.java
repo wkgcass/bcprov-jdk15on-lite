@@ -62,9 +62,9 @@ public class EnvelopedData
     }
 
     /**
-     * @deprecated use getInstance()
+     * deprecated use getInstance()
      */
-    public EnvelopedData(
+    private EnvelopedData(
         ASN1Sequence seq)
     {
         int     index = 0;

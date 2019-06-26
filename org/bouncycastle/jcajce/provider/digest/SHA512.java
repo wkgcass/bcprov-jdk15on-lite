@@ -102,18 +102,6 @@ public class SHA512
     }
 
     /**
-     * SHA-512 HMac
-     */
-    public static class OldSHA512
-        extends BaseMac
-    {
-        public OldSHA512()
-        {
-            super(new OldHMac(new SHA512Digest()));
-        }
-    }
-
-    /**
      * HMACSHA512
      */
     public static class KeyGenerator

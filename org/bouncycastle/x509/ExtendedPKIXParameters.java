@@ -19,7 +19,7 @@ import org.bouncycastle.util.Store;
 /**
  * This class extends the PKIXParameters with a validity model parameter.
  *
- * @deprecated use PKIXExtendedParameters
+ * deprecated use PKIXExtendedParameters
  */
 public class ExtendedPKIXParameters
     extends PKIXParameters
@@ -274,45 +274,12 @@ public class ExtendedPKIXParameters
     }
 
     /**
-     * Adds an additional Bouncy Castle {@link Store} to find CRLs, certificates,
-     * attribute certificates or cross certificates.
-     * <p>
-     * You should not use this method. This method is used for adding additional
-     * X.509 stores, which are used to add (remote) locations, e.g. LDAP, found
-     * during X.509 object processing, e.g. in certificates or CRLs. This method
-     * is used in PKIX certification path processing.
-     * <p>
-     * If <code>store</code> is <code>null</code> it is ignored.
-     * 
-     * @param store The store to add.
-     * @see #getStores()
-     * @deprecated use addStore().
-     */
-    public void addAdditionalStore(Store store)
-    {
-        if (store != null)
-        {
-            additionalStores.add(store);
-        }
-    }
-
-    /**
-     * @deprecated
-     */
-    public void addAddionalStore(Store store)
-    {
-        addAdditionalStore(store);      
-    }
-
-    /**
      * Returns an immutable <code>List</code> of additional Bouncy Castle
      * <code>Store</code>s used for finding CRLs, certificates, attribute
      * certificates or cross certificates.
      * 
      * @return an immutable <code>List</code> of additional Bouncy Castle
      *         <code>Store</code>s. Never <code>null</code>.
-     * 
-     * @see #addAdditionalStore(Store)
      */
     public List getAdditionalStores()
     {

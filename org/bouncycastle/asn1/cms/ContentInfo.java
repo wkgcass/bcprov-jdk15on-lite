@@ -69,9 +69,9 @@ public class ContentInfo
     }
 
     /**
-     * @deprecated use getInstance()
+     * deprecated use getInstance()
      */
-    public ContentInfo(
+    private ContentInfo(
         ASN1Sequence  seq)
     {
         if (seq.size() < 1 || seq.size() > 2)

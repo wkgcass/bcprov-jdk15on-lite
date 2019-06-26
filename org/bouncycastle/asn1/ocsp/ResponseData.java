@@ -50,22 +50,6 @@ public class ResponseData
         this.responseExtensions = responseExtensions;
     }
 
-    /**
-     * @deprecated use method taking Extensions
-     * @param responderID
-     * @param producedAt
-     * @param responses
-     * @param responseExtensions
-     */
-    public ResponseData(
-        ResponderID         responderID,
-        ASN1GeneralizedTime  producedAt,
-        ASN1Sequence        responses,
-        X509Extensions responseExtensions)
-    {
-        this(V1, responderID, ASN1GeneralizedTime.getInstance(producedAt), responses, Extensions.getInstance(responseExtensions));
-    }
-
     public ResponseData(
         ResponderID         responderID,
         ASN1GeneralizedTime  producedAt,

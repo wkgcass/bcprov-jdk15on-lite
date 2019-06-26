@@ -112,7 +112,7 @@ public abstract class ECFieldElement
         }
 
         /**
-         * @deprecated Use ECCurve.fromBigInteger to construct field elements
+         * deprecated Use ECCurve.fromBigInteger to construct field elements
          */
         public Fp(BigInteger q, BigInteger x)
         {
@@ -601,7 +601,7 @@ public abstract class ECFieldElement
          * x<sup>k3</sup> + x<sup>k2</sup> + x<sup>k1</sup> + 1</code>
          * represents the reduction polynomial <code>f(z)</code>.
          * @param x The BigInteger representing the value of the field element.
-         * @deprecated Use ECCurve.fromBigInteger to construct field elements
+         * deprecated Use ECCurve.fromBigInteger to construct field elements
          */
         public F2m(
             int m, 

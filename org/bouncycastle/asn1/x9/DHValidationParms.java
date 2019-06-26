@@ -10,7 +10,7 @@ import org.bouncycastle.asn1.DERBitString;
 import org.bouncycastle.asn1.DERSequence;
 
 /**
- * @deprecated use ValidationParams
+ * deprecated use ValidationParams
  */
 public class DHValidationParms extends ASN1Object
 {

@@ -125,12 +125,14 @@ public class SignatureSpi
         return signer.verifySignature(signature);
     }
 
+    @Deprecated
     protected void engineSetParameter(String s, Object o)
         throws InvalidParameterException
     {
         throw new UnsupportedOperationException("engineSetParameter unsupported");
     }
 
+    @Deprecated
     protected Object engineGetParameter(String s)
         throws InvalidParameterException
     {

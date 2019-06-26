@@ -1948,14 +1948,14 @@ public class PKIXCertPathReviewer extends CertPathValidatorUtilities
                     {
                         msg = new ErrorBundle(RESOURCE_NAME,"CertPathReviewer.QcLimitValueAlpha",
                                 new Object[] {limit.getCurrency().getAlphabetic(),
-                                              new TrustedInput(new Double(value)),
+                                              new TrustedInput(value),
                                               limit});
                     }
                     else
                     {
                         msg = new ErrorBundle(RESOURCE_NAME,"CertPathReviewer.QcLimitValueNum",
                                 new Object[]{Integers.valueOf(limit.getCurrency().getNumeric()),
-                                    new TrustedInput(new Double(value)),
+                                    new TrustedInput(value),
                                     limit});
                     }
                     addNotification(msg,index);

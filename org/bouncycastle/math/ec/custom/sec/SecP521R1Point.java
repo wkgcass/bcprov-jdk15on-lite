@@ -17,7 +17,7 @@ public class SecP521R1Point extends ECPoint.AbstractFp
      * @param y
      *            affine y co-ordinate
      *
-     * @deprecated Use ECCurve.createPoint to construct points
+     * deprecated Use ECCurve.createPoint to construct points
      */
     public SecP521R1Point(ECCurve curve, ECFieldElement x, ECFieldElement y)
     {
@@ -36,7 +36,7 @@ public class SecP521R1Point extends ECPoint.AbstractFp
      * @param withCompression
      *            if true encode with point compression
      *
-     * @deprecated per-point compression property will be removed, refer
+     * deprecated per-point compression property will be removed, refer
      *             {@link #getEncoded(boolean)}
      */
     public SecP521R1Point(ECCurve curve, ECFieldElement x, ECFieldElement y, boolean withCompression)

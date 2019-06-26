@@ -50,9 +50,9 @@ public class KeyAgreeRecipientInfo
     }
 
     /**
-     * @deprecated use getInstance()
+     * deprecated use getInstance()
      */
-    public KeyAgreeRecipientInfo(
+    private KeyAgreeRecipientInfo(
         ASN1Sequence seq)
     {
         int index = 0;

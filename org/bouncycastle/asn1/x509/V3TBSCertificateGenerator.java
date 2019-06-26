@@ -59,7 +59,7 @@ public class V3TBSCertificateGenerator
     }
 
         /**
-     * @deprecated use X500Name method
+     * deprecated use X500Name method
      */
     public void setIssuer(
         X509Name    issuer)
@@ -98,7 +98,7 @@ public class V3TBSCertificateGenerator
     }
 
         /**
-     * @deprecated use X500Name method
+     * deprecated use X500Name method
      */
     public void setSubject(
         X509Name    subject)
@@ -131,7 +131,7 @@ public class V3TBSCertificateGenerator
     }
 
     /**
-     * @deprecated use method taking Extensions
+     * deprecated use method taking Extensions
      * @param extensions
      */
     public void setExtensions(

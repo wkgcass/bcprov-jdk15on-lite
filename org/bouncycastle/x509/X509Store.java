@@ -9,7 +9,7 @@ import org.bouncycastle.util.Selector;
 import org.bouncycastle.util.Store;
 
 /**
- * @deprecated use CollectionStore - this class will be removed.
+ * deprecated use CollectionStore - this class will be removed.
  */
 public class X509Store
     implements Store

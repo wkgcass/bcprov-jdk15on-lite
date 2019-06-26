@@ -57,15 +57,6 @@ public class SHA384
         }
     }
 
-    public static class OldSHA384
-        extends BaseMac
-    {
-        public OldSHA384()
-        {
-            super(new OldHMac(new SHA384Digest()));
-        }
-    }
-
     public static class Mappings
         extends DigestAlgorithmProvider
     {

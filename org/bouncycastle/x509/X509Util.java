@@ -342,7 +342,7 @@ class X509Util
                     cls = Class.forName(className);
                 }
 
-                return new Implementation(cls.newInstance(), prov);
+                return new Implementation(cls.getDeclaredConstructor().newInstance(), prov);
             }
             catch (ClassNotFoundException e)
             {

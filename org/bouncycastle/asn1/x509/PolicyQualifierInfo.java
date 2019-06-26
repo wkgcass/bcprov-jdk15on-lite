@@ -60,9 +60,9 @@ public class PolicyQualifierInfo
     *
     * @param as <code>PolicyQualifierInfo</code> X509 structure
     * encoded as an ASN1Sequence.
-    * @deprecated use PolicyQualifierInfo.getInstance()
+    * deprecated use PolicyQualifierInfo.getInstance()
     */
-   public PolicyQualifierInfo(
+   private PolicyQualifierInfo(
        ASN1Sequence as)
    {
         if (as.size() != 2)
